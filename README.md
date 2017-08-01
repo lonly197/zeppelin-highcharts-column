@@ -36,7 +36,7 @@ And enable visualization from Helium menu.
 ## Ultimate Charts
 
 - [zeppelin-amcharts-line](https://github.com/lonly197/zeppelin-amcharts-line) ([amcharts](https://www.amcharts.com/))
-- [zeppelin-amcharts-area](https://github.com/ZEPL/zeppelin-amcharts-area) ([amcharts](https://www.amcharts.com/))
+- [zeppelin-amcharts-area](https://github.com/lonly197/zeppelin-amcharts-area) ([amcharts](https://www.amcharts.com/))
 - **zeppelin-highcharts-column** ([highcharts](http://www.highcharts.com/))
 - [zeppelin-highcharts-pie](https://github.com/lonly197/zeppelin-highcharts-heatmap) ([highcharts](http://www.highcharts.com/))
 - [zeppelin-highcharts-heatmap](https://github.com/lonly197/zeppelin-highcharts-heatmap) ([highcharts](http://www.highcharts.com/))
