@@ -1,6 +1,6 @@
 export const CommonParameter = {
   'inverted': { valueType: 'boolean', defaultValue: false, description: 'invert x and y axes', widget: 'checkbox', },
-  'floatingLegend': { valueType: 'string', defaultValue: 'default', description: 'floating legend', widget: 'option', optionValues: [ 'default', 'top-right', 'top-left', ], },
+  'floatingLegend': { valueType: 'string', defaultValue: 'default', description: 'floating legend', widget: 'option', optionValues: ['default', 'top-right', 'top-left',], },
   'rotateXAxisLabel': { valueType: 'int', defaultValue: 0, description: 'rotate xAxis labels', },
   'rotateYAxisLabel': { valueType: 'int', defaultValue: 0, description: 'rotate yAxis labels', },
   'dataLabel': { valueType: 'boolean', defaultValue: false, description: 'use data labels in column', widget: 'checkbox', },
@@ -8,12 +8,12 @@ export const CommonParameter = {
   'dataLabelPrecision': { valueType: 'string', defaultValue: '.1f', description: 'precision of data label format without <code>:</code> (<a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">doc</a>)', },
   'tooltipPrecision': { valueType: 'string', defaultValue: '.1f', description: 'precision of tooltip format without <code>:</code> (<a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">doc</a>)', },
   'legendLabelFormat': { valueType: 'string', defaultValue: '', description: 'text format of legend (<a href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting">doc</a>)', },
-  'xAxisPosition': { valueType: 'string', defaultValue: 'bottom', description: 'xAxis position', widget: 'option', optionValues: [ 'bottom', 'top', ], },
-  'yAxisPosition': { valueType: 'string', defaultValue: 'left', description: 'yAxis position', widget: 'option', optionValues: [ 'left', 'right', ], },
+  'xAxisPosition': { valueType: 'string', defaultValue: 'bottom', description: 'xAxis position', widget: 'option', optionValues: ['bottom', 'top',], },
+  'yAxisPosition': { valueType: 'string', defaultValue: 'left', description: 'yAxis position', widget: 'option', optionValues: ['left', 'right',], },
   'showLegend': { valueType: 'boolean', defaultValue: true, description: 'show legend', widget: 'checkbox', },
-  'legendPosition': { valueType: 'string', defaultValue: 'bottom', description: 'position of legend', widget: 'option', optionValues: [ 'bottom', 'top', ], },
-  'legendLayout': { valueType: 'string', defaultValue: 'horizontal', description: 'layout of legend', widget: 'option', optionValues: [ 'horizontal', 'vertical', ], },
-  'zoomType': { valueType: 'string', defaultValue: 'x', description: 'type of zoom', widget: 'option', optionValues: [ 'y', 'x', 'xy', 'none' ], },
+  'legendPosition': { valueType: 'string', defaultValue: 'bottom', description: 'position of legend', widget: 'option', optionValues: ['bottom', 'top',], },
+  'legendLayout': { valueType: 'string', defaultValue: 'horizontal', description: 'layout of legend', widget: 'option', optionValues: ['horizontal', 'vertical',], },
+  'zoomType': { valueType: 'string', defaultValue: 'x', description: 'type of zoom', widget: 'option', optionValues: ['y', 'x', 'xy', 'none'], },
   'subTitle': { valueType: 'string', defaultValue: '', description: 'sub title of chart', },
   'mainTitle': { valueType: 'string', defaultValue: '', description: 'main title of chart', },
   'xAxisUnit': { valueType: 'string', defaultValue: '', description: 'unit of xAxis', },
@@ -66,15 +66,18 @@ export function createColumnChartOption(data, parameter, keyNames) {
       useHTML: true
     },
     series: data,
+    credits: {
+      enabled: false
+    }
   }
 
-  if (mainTitle !== '') { option.title.text = mainTitle  }
+  if (mainTitle !== '') { option.title.text = mainTitle }
   if (subTitle !== '') { option.subtitle = { text: subTitle, } }
   if (xAxisName !== '') { option.xAxis.title = { text: xAxisName, } }
   if (yAxisName !== '') { option.yAxis.title = { text: yAxisName, } }
   if (xAxisUnit !== '') { option.xAxis.labels = { format: `{value} ${xAxisUnit}`, } }
   if (yAxisUnit !== '') { option.yAxis.labels = { format: `{value} ${yAxisUnit}`, } }
-  if (zoomType !== 'none' ) { option.chart.zoomType = zoomType }
+  if (zoomType !== 'none') { option.chart.zoomType = zoomType }
   if (xAxisPosition === 'top') { option.xAxis.opposite = true }
   if (yAxisPosition === 'right') { option.yAxis.opposite = true }
   if (legendPosition === 'top') { option.legend.verticalAlign = 'top' }
