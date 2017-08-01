@@ -1,6 +1,6 @@
 # zeppelin-highcharts-column
 
-The Ultimate Column Chart for Apache Zeppelin using [highcharts](https://www.highcharts.com/)
+The Column Chart for Apache Zeppelin using [highcharts](https://www.highcharts.com/)
 
 
 ## Compatibility
