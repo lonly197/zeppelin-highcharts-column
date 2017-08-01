@@ -47,3 +47,7 @@ And enable visualization from Helium menu.
 
 - Library: [highcharts](http://www.highcharts.com/)
 - Icon: [icons8.com](https://icons8.com/web-app/for/21126/bar-chart) 
+
+## Contact me
+
+* Email: lonly197@gmail.com
