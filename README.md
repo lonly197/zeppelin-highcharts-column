@@ -35,13 +35,11 @@ And enable visualization from Helium menu.
 
 ## Ultimate Charts
 
-- [ultimate-line-chart](https://github.com/ZEPL/zeppelin-ultimate-line-chart) ([amcharts](https://www.amcharts.com/))
-- [ultimate-area-chart](https://github.com/ZEPL/zeppelin-ultimate-area-chart) ([amcharts](https://www.amcharts.com/))
+- [zeppelin-amcharts-line](https://github.com/lonly197/zeppelin-amcharts-line) ([amcharts](https://www.amcharts.com/))
+- [zeppelin-amcharts-area](https://github.com/ZEPL/zeppelin-amcharts-area) ([amcharts](https://www.amcharts.com/))
 - **zeppelin-highcharts-column** ([highcharts](http://www.highcharts.com/))
-- [ultimate-pie-chart](https://github.com/ZEPL/zeppelin-ultimate-pie-chart) ([highcharts](http://www.highcharts.com/))
-- [ultimate-range-chart](https://github.com/ZEPL/zeppelin-ultimate-range-chart) ([highcharts](http://www.highcharts.com/))
-- [ultimate-scatter-chart](https://github.com/ZEPL/zeppelin-ultimate-scatter-chart) ([highcharts](http://www.highcharts.com/))
-- [ultimate-heatmap-chart](https://github.com/ZEPL/zeppelin-ultimate-heatmap-chart) ([highcharts](http://www.highcharts.com/))
+- [zeppelin-highcharts-pie](https://github.com/lonly197/zeppelin-highcharts-heatmap) ([highcharts](http://www.highcharts.com/))
+- [zeppelin-highcharts-heatmap](https://github.com/lonly197/zeppelin-highcharts-heatmap) ([highcharts](http://www.highcharts.com/))
 
 ## License
 
