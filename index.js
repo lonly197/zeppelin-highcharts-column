@@ -130,7 +130,7 @@ export default class Chart extends Visualization {
 
     const data = createColumnChartDataStructure(rows)
     const chartOption = createStackedColumnOption(data, parameter, keyNames, selectors)
-
+    console.log('column-chart-option',chartOption);
     this.chartInstance = Highcharts.chart(this.getChartElementId(), chartOption)
   }
 
