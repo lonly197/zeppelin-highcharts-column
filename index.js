@@ -127,7 +127,7 @@ export default class Chart extends Visualization {
     }
 
     const { rows, keyNames, selectors, } = transformer()
-
+    console.info('column-stack-rows',rows)
     const data = createColumnChartDataStructure(rows)
     const chartOption = createStackedColumnOption(data, parameter, keyNames, selectors)
     console.info('column-stack-chart-option',chartOption)
