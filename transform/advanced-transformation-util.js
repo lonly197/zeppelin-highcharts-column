@@ -620,7 +620,7 @@ export function getKGACube(rows, keyColumns, groupColumns, aggrColumns) {
     group: groupColumns.length !== 0,
     aggregator: aggrColumns.length !== 0,
   }
-  console.debug('getKGACube-row',row)
+  console.debug('getKGACube-row',rows)
   console.debug('getKGACube-keyColumns',keyColumns)
   console.debug('getKGACube-groupColumns',groupColumns)
   console.debug('getKGACube-aggrColumns',aggrColumns)
