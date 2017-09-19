@@ -961,6 +961,7 @@ export function getCubeValue(obj, aggregator, aggrColumnName) {
   let value = 0 /** default is zero */
   try {
     value = parseFloat(obj[aggrColumnName].value)
+    console.info('getCubeValuebefore',value)
     /** if AVG or COUNT, calculate it now, previously we can't because we were doing accumulation */
     if (aggregator === Aggregator.AVG) {
       value = value / obj[aggrColumnName].count
@@ -1120,7 +1121,6 @@ export function fillArrayRow(schema, aggrColumns, obj,
         selector: selector, value: new Array(keyNames.length)
       }
     }
-    console.info('keyArrayRows',value)
     keyArrayRows[selectorIndex].value[keyIndex] = value
   }
 
