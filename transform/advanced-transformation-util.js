@@ -600,8 +600,7 @@ const AggregatorFunctions = {
   },
   not: function(a, b) {
     const varA = (a !== undefined) ? (isNaN(a) ? 1 : parseFloat(a)) : 0
-    const varB = (b !== undefined) ? (isNaN(b) ? 1 : parseFloat(b)) : 0
-    return varA + varB
+    return varA
   }
 }
 
