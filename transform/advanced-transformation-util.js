@@ -960,8 +960,11 @@ export function getSelectorName(mergedGroupName, aggrColumnLength, aggrColumnNam
 export function getCubeValue(obj, aggregator, aggrColumnName) {
   let value = 0 /** default is zero */
   try {
+    console.debug('getCubeValue-obj',obj)
+    console.debug('getCubeValue-aggregator',aggregator)
+    console.debug('getCubeValue-aggrColumnName',aggrColumnNameobj)
     value = parseFloat(obj[aggrColumnName].value)
-    console.info('getCubeValuebefore',value)
+    console.debug('getCubeValuebefore',value)
     /** if AVG or COUNT, calculate it now, previously we can't because we were doing accumulation */
     if (aggregator === Aggregator.AVG) {
       value = value / obj[aggrColumnName].count
