@@ -425,8 +425,7 @@ export const Aggregator = {
   COUNT: 'count',
   AVG: 'avg',
   MIN: 'min',
-  MAX: 'max',
-  NOT: 'not'
+  MAX: 'max'
 }
 
 const TransformMethod = {
@@ -597,10 +596,6 @@ const AggregatorFunctions = {
     const varA = (a !== undefined) ? (isNaN(a) ? 1 : parseFloat(a)) : 0
     const varB = (b !== undefined) ? (isNaN(b) ? 1 : parseFloat(b)) : 0
     return varA + varB
-  },
-  not: function(a, b) {
-    const varA = (a !== undefined) ? (isNaN(a) ? 1 : parseFloat(a)) : 0
-    return varA
   }
 }
 
@@ -609,8 +604,7 @@ const AggregatorFunctionDiv = {
   min: false,
   max: false,
   count: false,
-  avg: true,
-  not:false
+  avg: true
 }
 
 /** nested cube `(key) -> (group) -> aggregator` */
@@ -620,10 +614,6 @@ export function getKGACube(rows, keyColumns, groupColumns, aggrColumns) {
     group: groupColumns.length !== 0,
     aggregator: aggrColumns.length !== 0,
   }
-  console.debug('getKGACube-row',rows)
-  console.debug('getKGACube-keyColumns',keyColumns)
-  console.debug('getKGACube-groupColumns',groupColumns)
-  console.debug('getKGACube-aggrColumns',aggrColumns)
   let cube = {}
   const entry = {}
 
@@ -969,10 +959,7 @@ export function getCubeValue(obj, aggregator, aggrColumnName) {
       value = value / obj[aggrColumnName].count
     } else if (aggregator === Aggregator.COUNT) {
       value = value
-    } else if(aggregator === Aggregator.NOT){
-      value = value
-    }
-    else {
+    } else {
       // value = value
     }
 

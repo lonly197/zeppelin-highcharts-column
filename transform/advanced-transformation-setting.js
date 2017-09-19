@@ -128,7 +128,6 @@ const settingTemplate = `
                   <li ng-click="aggregatorChanged(null, axisSpec, 'avg')"><a>avg</a></li>
                   <li ng-click="aggregatorChanged(null, axisSpec, 'min')"><a>min</a></li>
                   <li ng-click="aggregatorChanged(null, axisSpec, 'max')"><a>max</a></li>
-                  <li ng-click="aggregatorChanged(null, axisSpec, 'not')"><a>not</a></li>
                 </ul>
               </div>
 
@@ -173,7 +172,6 @@ const settingTemplate = `
                   <li ng-click="aggregatorChanged($index, axisSpec, 'avg')"><a>avg</a></li>
                   <li ng-click="aggregatorChanged($index, axisSpec, 'min')"><a>min</a></li>
                   <li ng-click="aggregatorChanged($index, axisSpec, 'max')"><a>max</a></li>
-                  <li ng-click="aggregatorChanged($index, axisSpec, 'not')"><a>not</a></li>
                 </ul>
               </span>
 
