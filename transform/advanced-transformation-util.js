@@ -609,7 +609,8 @@ const AggregatorFunctionDiv = {
   min: false,
   max: false,
   count: false,
-  avg: true
+  avg: true,
+  not:false
 }
 
 /** nested cube `(key) -> (group) -> aggregator` */
