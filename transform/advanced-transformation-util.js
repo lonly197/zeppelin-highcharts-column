@@ -426,6 +426,7 @@ export const Aggregator = {
   AVG: 'avg',
   MIN: 'min',
   MAX: 'max',
+  NOT: 'not'
 }
 
 const TransformMethod = {
@@ -593,6 +594,11 @@ const AggregatorFunctions = {
     return Math.max(varA, varB)
   },
   avg: function(a, b, c) {
+    const varA = (a !== undefined) ? (isNaN(a) ? 1 : parseFloat(a)) : 0
+    const varB = (b !== undefined) ? (isNaN(b) ? 1 : parseFloat(b)) : 0
+    return varA + varB
+  },
+  not: function(a, b) {
     const varA = (a !== undefined) ? (isNaN(a) ? 1 : parseFloat(a)) : 0
     const varB = (b !== undefined) ? (isNaN(b) ? 1 : parseFloat(b)) : 0
     return varA + varB
@@ -960,7 +966,10 @@ export function getCubeValue(obj, aggregator, aggrColumnName) {
       value = value / obj[aggrColumnName].count
     } else if (aggregator === Aggregator.COUNT) {
       value = value
-    } else {
+    } else if(aggregator === Aggregator.NOT){
+      value = value
+    }
+    else {
       // value = value
     }
 
