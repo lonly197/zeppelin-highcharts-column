@@ -1120,6 +1120,7 @@ export function fillArrayRow(schema, aggrColumns, obj,
         selector: selector, value: new Array(keyNames.length)
       }
     }
+    console.info('keyArrayRows',value)
     keyArrayRows[selectorIndex].value[keyIndex] = value
   }
 
