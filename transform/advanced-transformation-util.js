@@ -620,7 +620,10 @@ export function getKGACube(rows, keyColumns, groupColumns, aggrColumns) {
     group: groupColumns.length !== 0,
     aggregator: aggrColumns.length !== 0,
   }
-
+  console.debug('getKGACube-row',row)
+  console.debug('getKGACube-keyColumns',keyColumns)
+  console.debug('getKGACube-groupColumns',groupColumns)
+  console.debug('getKGACube-aggrColumns',aggrColumns)
   let cube = {}
   const entry = {}
 
@@ -960,7 +963,6 @@ export function getSelectorName(mergedGroupName, aggrColumnLength, aggrColumnNam
 export function getCubeValue(obj, aggregator, aggrColumnName) {
   let value = 0 /** default is zero */
   try {
-    console.debug('getCubeValue-obj',obj)
     value = parseFloat(obj[aggrColumnName].value)
     /** if AVG or COUNT, calculate it now, previously we can't because we were doing accumulation */
     if (aggregator === Aggregator.AVG) {

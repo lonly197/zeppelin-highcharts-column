@@ -213,7 +213,6 @@ export default class AdvancedTransformation extends Transformation {
     const param = getCurrentChartParam(conf)
     const paramSpecs = getCurrentChartParamSpecs(conf)
     const parsedParam = parseParameter(paramSpecs, param)
-    console.debug('transform-tableData',tableData)
     let { transformer, column, } = getTransformer(conf, tableData.rows, axisSpecs, axis)
 
     return {
