@@ -116,7 +116,7 @@ export default class Chart extends Visualization {
 
     const data = createColumnChartDataStructure(rows)
     const chartOption = createColumnChartOption(data, parameter, keyNames, selectors)
-    console.info('column-chart-option',chartOption)
+    console.debug('column-chart-option',chartOption)
     this.chartInstance = Highcharts.chart(this.getChartElementId(), chartOption)
   }
 
@@ -127,10 +127,10 @@ export default class Chart extends Visualization {
     }
 
     const { rows, keyNames, selectors, } = transformer()
-    console.info('column-stack-rows',rows)
+    console.debug('column-stack-rows',rows)
     const data = createColumnChartDataStructure(rows)
     const chartOption = createStackedColumnOption(data, parameter, keyNames, selectors)
-    console.info('column-stack-chart-option',chartOption)
+    console.debug('column-stack-chart-option',chartOption)
     this.chartInstance = Highcharts.chart(this.getChartElementId(), chartOption)
   }
 
@@ -158,7 +158,7 @@ export default class Chart extends Visualization {
 
     const { series, drillDownSeries, } = createDrilldownDataStructure(rows)
     const chartOption = createDrilldownColumnOption(series, drillDownSeries, parameter, keyNames, selectors)
-    console.info('column-drill-chart-option',chartOption)
+    console.debug('column-drill-chart-option',chartOption)
     this.chartInstance = Highcharts.chart(this.getChartElementId(), chartOption)
   }
 
